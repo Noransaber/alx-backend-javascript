@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "mocha test",
+    "start": "node server.js",
+    "dev": "npm run dev"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
