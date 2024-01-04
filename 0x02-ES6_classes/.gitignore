@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignore main.js files from 0 to 12
+[0-9]-main.js
+1[0-2]-main.js
+
+node_modules
