@@ -170,9 +170,6 @@ bob@dylan:~$ npm run dev 0-main.js
 ]
 bob@dylan:~$
 ```
-
-solution - [0-get_list_students.js](./0-get_list_students.js)
-
 ### 1. More mapping
 
 Create a function `getListStudentIds` that returns an array of ids from a list of object.
@@ -197,9 +194,6 @@ bob@dylan:~$ npm run dev 1-main.js
 [ 1, 2, 5 ]
 bob@dylan:~$
 ```
-
-solution - [1-get_list_student_ids.js](./1-get_list_student_ids.js)
-
 
 ### 2. Filter
 mandatory
@@ -226,9 +220,6 @@ bob@dylan:~$ npm run dev 2-main.js
 ]
 bob@dylan:~$
 ```
-
-solution - [2-get_students_by_loc.js](./2-get_students_by_loc.js)
-
 ### 3. Reduce
 
 Create a function `getStudentIdsSum` that returns the sum of all the student ids.
@@ -252,8 +243,6 @@ bob@dylan:~$ npm run dev 3-main.js
 8
 bob@dylan:~$
 ```
-
-solution - [3-get_ids_sum.js](./3-get_ids_sum.js)
 
 ### 4. Combine
 
@@ -306,8 +295,6 @@ bob@dylan:~$ npm run dev 4-main.js
 bob@dylan:~$
 ```
 
-solution - [4-update_grade_by_city.js](./4-update_grade_by_city.js)
-
 ### 5. Typed Arrays
 
 Create a function named `createInt8TypedArray` that returns a new `ArrayBuffer` with an `Int8` value at a specific position.
@@ -335,8 +322,6 @@ DataView {
 bob@dylan:~$
 ```
 
-solution - [5-typed_arrays.js](./5-typed_arrays.js)
-
 ### 6. Set data structure
 
 Create a function named `setFromArray` that returns a `Set` from an array.
@@ -354,8 +339,6 @@ bob@dylan:~$ npm run dev 6-main.js
 Set { 12, 32, 15, 78, 98 }
 bob@dylan:~$
 ```
-
-solution - [6-set.js](./6-set.js)
 
 ### 7. More set data structure
 
@@ -379,8 +362,6 @@ false
 bob@dylan:~$
 ```
 
-solution - [7-has_array_values.js](./7-has_array_values.js)
-
 ### 8. Clean set
 
 Create a function named `cleanSet` that returns a string of all the set values that start with a specific string (`startString`).
@@ -402,8 +383,6 @@ jovi-aparte-appetit
 
 bob@dylan:~$
 ```
-
-solution - [8-clean_set.js](./8-clean_set.js)
 
 ### 9. Map data structure
 
@@ -437,8 +416,6 @@ Map {
 }
 bob@dylan:~$
 ```
-
-solution - [9-groceries_list.js](./9-groceries_list.js)
 
 ### 10. More map data structure
 mandatory
@@ -477,8 +454,6 @@ Map {
 }
 bob@dylan:~$
 ```
-
-solution - [10-update_uniq_items.js](./10-update_uniq_items.js)
 
 ### 11. Weak link data structure
 
