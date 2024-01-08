@@ -499,5 +499,3 @@ bob@dylan:~$ npm run dev 100-main.js
    ...
 bob@dylan:~$
 ```
-
-solution - [100-weak.js](./100-weak.js)
