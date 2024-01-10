@@ -156,5 +156,8 @@ module.exports = {
 
 ```
 
-## Welcome at
+## Welcome at my social accounts❤️
+- [Linkedin](https://www.linkedin.com/in/noran-saber-abdelfattah-6198471ba/)
+- [X](https://twitter.com/Noransaber11)
+- [Medium](https://medium.com/@noransaber685)
 
