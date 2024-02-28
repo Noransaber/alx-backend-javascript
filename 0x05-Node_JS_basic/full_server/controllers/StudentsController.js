@@ -1,23 +1,23 @@
 import readDatabase from '../utils';
 
+/**
+ * The list of supported majors.
+ */
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
- * Student controller class
+ * Contains the student-related route handlers.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
 class StudentsController {
-  /**
-   * resolves request to the all students
-   * @param {Object} request - contains the request from the server
-   * @param {Object} response - contains the response for the server
-   */
   static getAllStudents(request, response) {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
 
     readDatabase(dataPath)
       .then((studentGroups) => {
         const responseParts = ['This is the list of our students'];
-
+        // A comparison function for ordering a list of strings in ascending
+        // order by alphabetic order and case insensitive
         const cmpFxn = (a, b) => {
           if (a[0].toLowerCase() < b[0].toLowerCase()) {
             return -1;
@@ -28,16 +28,12 @@ class StudentsController {
           return 0;
         };
 
-        for (const [field, group] of Object.entries(studentGroups).sort(
-          cmpFxn,
-        )) {
-          responseParts.push(
-            [
-              `Number of students in ${field}: ${group.length}.`,
-              'List:',
-              group.map((student) => student.firstname).join(', '),
-            ].join(' '),
-          );
+        for (const [field, group] of Object.entries(studentGroups).sort(cmpFxn)) {
+          responseParts.push([
+            `Number of students in ${field}: ${group.length}.`,
+            'List:',
+            group.map((student) => student.firstname).join(', '),
+          ].join(' '));
         }
         response.status(200).send(responseParts.join('\n'));
       })
@@ -48,11 +44,6 @@ class StudentsController {
       });
   }
 
-  /**
-   * resolves request to the studennt majors
-   * @param {Object} request - contains the request from the server
-   * @param {Object} response - contains the response for the server
-   */
   static getAllStudentsByMajor(request, response) {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
     const { major } = request.params;
@@ -67,9 +58,7 @@ class StudentsController {
 
         if (Object.keys(studentGroups).includes(major)) {
           const group = studentGroups[major];
-          responseText = `List: ${group
-            .map((student) => student.firstname)
-            .join(', ')}`;
+          responseText = `List: ${group.map((student) => student.firstname).join(', ')}`;
         }
         response.status(200).send(responseText);
       })
@@ -82,3 +71,4 @@ class StudentsController {
 }
 
 export default StudentsController;
+module.exports = StudentsController;
